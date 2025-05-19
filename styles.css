@@ -1,0 +1,504 @@
+/* Основные настройки в стиле 90-х */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVQImWNgYGD4z8DAwMDAwAAACQAFAMB9HQQAAAAASUVORK5CYII=");
+    font-family: "Courier New", monospace;
+    color: #ff0000;
+    cursor: crosshair;
+    overflow-x: hidden;
+}
+
+/* Заголовок в стиле Doom */
+.doom-header {
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(to bottom, #1a0000, #000000);
+    border-bottom: 3px solid #ff0000;
+}
+
+.flames {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: url("data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
+    opacity: 0.3;
+    animation: flicker 0.5s infinite;
+}
+
+@keyframes flicker {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.1; }
+    100% { opacity: 0.3; }
+}
+
+.doom-title {
+    position: relative;
+    z-index: 1;
+}
+
+.blood-text {
+    font-size: 72px;
+    font-weight: bold;
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+    letter-spacing: 8px;
+    display: block;
+    animation: blood-drip 2s infinite;
+}
+
+@keyframes blood-drip {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(3px); }
+    100% { transform: translateY(0); }
+}
+
+.subtitle {
+    font-size: 24px;
+    color: #ffff00;
+    text-shadow: 2px 2px 4px #000000;
+    display: block;
+    margin-top: 10px;
+}
+
+.skull-divider {
+    font-size: 32px;
+    margin: 20px 0;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Навигация в стиле таблиц 90-х */
+.nav-table {
+    width: 100%;
+    background-color: #1a0000;
+    border: 3px solid #ff0000;
+    margin: 0;
+}
+
+.nav-cell {
+    text-align: center;
+    border: 1px solid #880000;
+    background-color: #2a0000;
+    padding: 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px;
+    color: #ffff00;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #ff0000;
+    color: #000000;
+    text-shadow: 0 0 5px #ffff00;
+}
+
+/* Основной контент */
+.main-section {
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.content-table {
+    width: 100%;
+    border: 3px ridge #880000;
+    background-color: #0a0000;
+}
+
+.sidebar {
+    width: 250px;
+    vertical-align: top;
+    padding: 10px;
+    border-right: 2px solid #ff0000;
+}
+
+.stats-box, .news-box {
+    background-color: #1a0000;
+    border: 2px inset #ff0000;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.box-title {
+    color: #ffff00;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+.stat-item {
+    margin: 10px 0;
+    font-size: 12px;
+}
+
+.stat-name {
+    color: #888888;
+}
+
+.stat-value {
+    color: #00ff00;
+    font-weight: bold;
+    float: right;
+}
+
+.blood-counter {
+    color: #ff0000;
+    animation: blood-pulse 1s infinite;
+}
+
+@keyframes blood-pulse {
+    0% { color: #ff0000; }
+    50% { color: #880000; }
+    100% { color: #ff0000; }
+}
+
+.chaos-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #333333;
+    border: 1px solid #666666;
+    margin-top: 5px;
+}
+
+.chaos-fill {
+    height: 100%;
+    width: 75%;
+    background: linear-gradient(to right, #ff0000, #ffff00);
+    animation: chaos-flow 2s infinite;
+}
+
+@keyframes chaos-flow {
+    0% { width: 75%; }
+    50% { width: 85%; }
+    100% { width: 75%; }
+}
+
+/* Новости с marquee */
+.news-item {
+    color: #00ff00;
+    margin: 10px 0;
+    font-size: 12px;
+}
+
+.main-content {
+    padding: 20px;
+    vertical-align: top;
+}
+
+.welcome-box {
+    text-align: center;
+}
+
+.section-title {
+    color: #ff0000;
+    font-size: 32px;
+    text-shadow: 3px 3px 6px #000000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.gothic-text {
+    color: #888888;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.portal-container {
+    margin: 30px auto;
+    width: 300px;
+}
+
+.portal-image {
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.portal-image:hover {
+    transform: scale(1.1);
+    filter: brightness(1.5);
+}
+
+.blink-text {
+    animation: blink 1s infinite;
+    color: #ffff00;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Таблица стран */
+.countries-section {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.countries-table {
+    width: 100%;
+    border: 3px solid #ff0000;
+    background-color: #0a0000;
+    border-collapse: collapse;
+}
+
+.table-header {
+    background-color: #2a0000;
+    color: #ffff00;
+    font-weight: bold;
+}
+
+.countries-table th {
+    padding: 10px;
+    border: 1px solid #880000;
+    text-align: center;
+}
+
+.country-row {
+    background-color: #1a0000;
+    border: 1px solid #880000;
+    transition: all 0.3s;
+}
+
+.country-row:hover {
+    background-color: #3a0000;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+.country-row td {
+    padding: 10px;
+    border: 1px solid #880000;
+    text-align: center;
+}
+
+.country-emblem {
+    font-size: 24px;
+}
+
+.country-name {
+    color: #ff0000;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.danger-bar {
+    font-family: monospace;
+}
+
+.danger-low { color: #00ff00; }
+.danger-medium { color: #ffff00; }
+.danger-high { color: #ff8800; }
+.danger-extreme { color: #ff0000; }
+
+.enter-btn {
+    background-color: #ff0000;
+    color: #000000;
+    border: 2px outset #ff0000;
+    padding: 5px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.enter-btn:hover {
+    background-color: #880000;
+    color: #ffff00;
+    border: 2px inset #880000;
+}
+
+/* Герои в стиле Diablo */
+.heroes-section {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.hero-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.hero-card {
+    width: 300px;
+    background-color: #1a0000;
+    border: 3px ridge #ff0000;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.hero-card:hover {
+    box-shadow: 0 0 20px #ff0000;
+    transform: translateY(-5px);
+}
+
+.hero-portrait {
+    font-size: 64px;
+    margin: 20px 0;
+}
+
+.hero-name {
+    color: #ffff00;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.hero-stats p {
+    margin: 5px 0;
+    color: #888888;
+    font-size: 14px;
+}
+
+.stat-highlight {
+    color: #00ff00;
+    font-weight: bold;
+}
+
+.hero-abilities {
+    margin-top: 20px;
+    border-top: 1px solid #880000;
+    padding-top: 15px;
+}
+
+.ability {
+    color: #ff8800;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Гостевая книга */
+.guestbook {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1a0000;
+    border: 3px double #ff0000;
+}
+
+.guestbook-title {
+    color: #ffff00;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.guestbook-form {
+    margin-bottom: 30px;
+}
+
+.guest-input, .guest-message {
+    width: 100%;
+    background-color: #000000;
+    border: 1px solid #ff0000;
+    color: #00ff00;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: "Courier New", monospace;
+}
+
+.guest-message {
+    height: 100px;
+    resize: none;
+}
+
+.guest-submit {
+    width: 100%;
+    background-color: #ff0000;
+    color: #000000;
+    border: 3px outset #ff0000;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.guest-submit:hover {
+    background-color: #880000;
+    color: #ffff00;
+    border: 3px inset #880000;
+}
+
+.guest-entry {
+    color: #888888;
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px dotted #880000;
+}
+
+.guest-entry strong {
+    color: #00ff00;
+}
+
+/* Футер в стиле 90-х */
+.footer {
+    background-color: #0a0000;
+    border-top: 3px solid #ff0000;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.footer-text {
+    color: #888888;
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer-link {
+    color: #ffff00;
+    text-decoration: underline;
+}
+
+.visitor-counter {
+    color: #00ff00;
+    font-weight: bold;
+}
+
+.skull-gif, .flame-gif {
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+/* Скроллбар в стиле готик */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+    border: 1px solid #880000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff0000;
+    border: 1px solid #880000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #880000;
+}

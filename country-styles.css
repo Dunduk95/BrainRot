@@ -1,0 +1,398 @@
+/* Стили для детальных страниц стран */
+
+/* Заголовок страны */
+.country-header-detail {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(to bottom, #2a0000, #000000);
+    border-bottom: 5px solid #ff0000;
+    position: relative;
+    overflow: hidden;
+}
+
+.country-header-detail::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
+    opacity: 0.1;
+    animation: static-noise 0.5s infinite;
+}
+
+@keyframes static-noise {
+    0% { transform: translateX(0) translateY(0); }
+    50% { transform: translateX(-5px) translateY(5px); }
+    100% { transform: translateX(5px) translateY(-5px); }
+}
+
+.country-emblem-large {
+    font-size: 120px;
+    margin-bottom: 20px;
+    animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+    0% { filter: drop-shadow(0 0 10px #ff0000); }
+    50% { filter: drop-shadow(0 0 30px #ff0000); }
+    100% { filter: drop-shadow(0 0 10px #ff0000); }
+}
+
+.country-title {
+    font-size: 64px;
+    color: #ff0000;
+    text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000;
+    letter-spacing: 10px;
+    margin: 10px 0;
+}
+
+.country-subtitle {
+    font-size: 24px;
+    color: #ffff00;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+/* Контент страны */
+.country-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.country-section {
+    background-color: #0a0000;
+    border: 3px ridge #ff0000;
+    padding: 30px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.country-section::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #ff0000, #880000, #ff0000);
+    z-index: -1;
+    opacity: 0.5;
+    animation: border-glow 3s infinite;
+}
+
+@keyframes border-glow {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+    100% { opacity: 0.3; }
+}
+
+/* Таблицы информации */
+.info-table {
+    width: 100%;
+    background-color: #1a0000;
+    border: 2px solid #880000;
+    margin: 20px 0;
+}
+
+.info-label {
+    width: 25%;
+    padding: 10px;
+    color: #888888;
+    font-weight: bold;
+    border: 1px solid #880000;
+    background-color: #2a0000;
+}
+
+.info-value {
+    padding: 10px;
+    color: #00ff00;
+    font-weight: bold;
+    border: 1px solid #880000;
+}
+
+/* Описание страны */
+.country-description {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #1a0000;
+    border-left: 5px solid #ff0000;
+}
+
+.country-description p {
+    color: #cccccc;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* ASCII карта */
+.region-map {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.ascii-map {
+    display: inline-block;
+    font-family: monospace;
+    font-size: 14px;
+    color: #00ff00;
+    background-color: #000000;
+    padding: 20px;
+    border: 2px solid #00ff00;
+    text-align: left;
+}
+
+/* Правительство */
+.government-info {
+    padding: 20px;
+}
+
+.ruler-portrait {
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+}
+
+.ascii-portrait {
+    font-family: monospace;
+    font-size: 16px;
+    color: #ffff00;
+    background-color: #1a0000;
+    padding: 20px;
+    border: 3px double #ff0000;
+}
+
+.ruler-bio {
+    color: #cccccc;
+    font-style: italic;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #1a0000;
+    border-left: 3px solid #ffff00;
+}
+
+.power-structure {
+    list-style: none;
+    padding: 0;
+}
+
+.power-structure li {
+    color: #00ff00;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #1a0000;
+    border-left: 3px solid #00ff00;
+}
+
+/* Военная таблица */
+.military-table {
+    width: 100%;
+    background-color: #0a0000;
+    border: 3px solid #ff0000;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.military-table th,
+.military-table td {
+    padding: 12px;
+    border: 1px solid #880000;
+    text-align: center;
+}
+
+.military-table th {
+    background-color: #2a0000;
+    color: #ffff00;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.military-table td {
+    color: #cccccc;
+}
+
+/* Статистические полосы */
+.military-stats {
+    margin-top: 30px;
+}
+
+.stat-bar {
+    margin: 15px 0;
+}
+
+.stat-label {
+    display: block;
+    color: #888888;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #333333;
+    border: 2px solid #666666;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(to right, #00ff00, #ffff00, #ff0000);
+    transition: width 2s ease;
+}
+
+/* Культура */
+.culture-info {
+    padding: 20px;
+}
+
+.values-list {
+    list-style: none;
+    padding: 0;
+}
+
+.values-list li {
+    color: #ffcc00;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #1a0000;
+    border-left: 3px solid #ffcc00;
+    font-size: 16px;
+}
+
+.landmarks {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.landmark {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a0000;
+    border: 3px ridge #880000;
+}
+
+.ascii-landmark {
+    font-family: monospace;
+    font-size: 12px;
+    color: #00ff00;
+    margin: 20px 0;
+}
+
+.personalities {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #1a0000;
+    border: 2px dashed #ff0000;
+}
+
+.personalities p {
+    color: #cccccc;
+    margin: 10px 0;
+}
+
+.personalities strong {
+    color: #ffff00;
+}
+
+/* Дипломатические отношения */
+.relations-table {
+    width: 100%;
+    background-color: #0a0000;
+    border: 3px solid #ff0000;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.relations-table th,
+.relations-table td {
+    padding: 12px;
+    border: 1px solid #880000;
+    text-align: center;
+}
+
+.relation-friendly { color: #00ff00; }
+.relation-neutral { color: #ffff00; }
+.relation-tense { color: #ff8800; }
+.relation-hostile { color: #ff0000; }
+
+/* Секретная информация */
+.classified {
+    background-color: #000000;
+    border: 5px solid #ff0000;
+    position: relative;
+}
+
+.classified::before {
+    content: "CLASSIFIED";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 20px;
+    transform: rotate(15deg);
+    opacity: 0.5;
+}
+
+.classified-info {
+    padding: 30px;
+    text-align: center;
+}
+
+.classified-text {
+    font-family: monospace;
+    font-size: 16px;
+    color: #ff0000;
+    line-height: 2;
+}
+
+.reveal-on-hover {
+    opacity: 0;
+    transition: opacity 0.5s;
+    display: block;
+    margin-top: 20px;
+    color: #888888;
+}
+
+.classified-info:hover .reveal-on-hover {
+    opacity: 1;
+}
+
+/* Футер страны */
+.country-footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #1a0000;
+    border-top: 3px solid #ff0000;
+    margin-top: 50px;
+}
+
+.country-footer p {
+    color: #ffff00;
+    font-size: 18px;
+    margin-bottom: 20px;
+    animation: blink 2s infinite;
+}
+
+.back-link {
+    color: #00ff00;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 30px;
+    background-color: #2a0000;
+    border: 3px outset #00ff00;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.back-link:hover {
+    background-color: #00ff00;
+    color: #000000;
+    border: 3px inset #00ff00;
+}
